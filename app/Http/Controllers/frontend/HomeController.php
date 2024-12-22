@@ -12,8 +12,8 @@ use Inertia\Inertia;
 class HomeController extends Controller
 {
     public function index(){
-        $doctors = Doctor::orderBy('name')->get();
-        $specialists = Specialist::orderBy('name')->limit(5)->get();
+        $doctors = Doctor::all();
+        $specialists = Specialist::all();
         // return view('frontend.home', compact('doctors', 'specialists'));
 
         return Inertia::render('Home',compact('doctors', 'specialists'));

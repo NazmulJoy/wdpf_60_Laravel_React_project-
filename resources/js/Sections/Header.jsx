@@ -1,4 +1,6 @@
 import React from 'react'
+import {Link} from "@inertiajs/react"
+
 
 export default function Header() {
   return (
@@ -97,66 +99,14 @@ export default function Header() {
             <div className="rr-header-main-menu rr-header-menu ml-30  d-none d-xl-block">
               <nav className="rr-main-menu-content">
                 <ul>
-                  <li className="has-dropdown">
-                    <a href="index.html">Home</a>
-                    <div className="rr-submenu submenu has-homemenu">
-                      <div className="row gx-6 row-cols-1 row-cols-md-2 row-cols-xl-4">
-                        <div className="col homemenu">
-                          <div className="homemenu-thumb mb-15">
-                            <img src="assets/img/menu/home-1.jpg" alt="img" />
-                            <div className="homemenu-btn">
-                              <a className="rr-menu-btn" href="index.html">Home 01</a>
-                            </div>
-                          </div>
-                          <div className="homemenu-content text-center">
-                            <h4 className="homemenu-title">
-                              <a href="index.html">Home 01</a>
-                            </h4>
-                          </div>
-                        </div>
-                        <div className="col homemenu">
-                          <div className="homemenu-thumb mb-15">
-                            <img src="assets/img/menu/home-2.jpg" alt="img" />
-                            <div className="homemenu-btn">
-                              <a className="rr-menu-btn" href="index-2.html">Home 02</a>
-                            </div>
-                          </div>
-                          <div className="homemenu-content text-center">
-                            <h4 className="homemenu-title">
-                              <a href="index-2.html">Home 02</a>
-                            </h4>
-                          </div>
-                        </div>
-                        <div className="col homemenu">
-                          <div className="homemenu-thumb mb-15">
-                            <img src="assets/img/menu/home-3.jpg" alt="img" />
-                            <div className="homemenu-btn">
-                              <a className="rr-menu-btn" href="index-3.html">Home 03</a>
-                            </div>
-                          </div>
-                          <div className="homemenu-content text-center">
-                            <h4 className="homemenu-title">
-                              <a href="index-3.html">Home 03</a>
-                            </h4>
-                          </div>
-                        </div>
-                        <div className="col homemenu">
-                          <div className="homemenu-thumb mb-15">
-                            <img src="assets/img/menu/home-4.jpg" alt="img" />
-                            <div className="homemenu-btn">
-                              <a className="rr-menu-btn" href="index-4.html">Home 04</a>
-                            </div>
-                          </div>
-                          <div className="homemenu-content text-center">
-                            <h4 className="homemenu-title">
-                              <a href="index-3.html">Home 04</a>
-                            </h4>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <li >
+                    <Link href={route('home')}>Home</Link>
+                    
                   </li>
-                  <li><a href="about.html">about us</a></li>
+                  <li>
+                  <Link href={route('about')}>About</Link>
+                  </li>
+                  
                   <li className="has-dropdown">
                     <a href="service-details.html">Service</a>
                     <ul className="submenu rr-submenu">
@@ -185,7 +135,10 @@ export default function Header() {
                       <li><a href="blog-details.html">Blog Details</a></li>
                     </ul>
                   </li>
-                  <li><a href="contact.html">Contact</a></li>
+                  <li>
+                  <Link href={route('contact')}>Contact</Link>
+                  </li>
+                  
                 </ul>
               </nav>
             </div>
