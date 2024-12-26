@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Appointment;
 use App\Models\Doctor;
 use Illuminate\Http\Request;
-
+use Inertia\Inertia;
 class AppointmentController extends Controller
 {
     /**
@@ -23,7 +23,8 @@ class AppointmentController extends Controller
     public function create()
     {
         $doctors= Doctor::all();
-        return view('frontend.appointment', compact('doctors'));
+        //return view('frontend.appointment', compact('doctors'));
+        return Inertia::render('Appointment', compact('doctors'));
     }
 
     /**

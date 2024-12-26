@@ -149,7 +149,7 @@ export default function Header() {
                 <button className="search-open-btn"><i className="fa-solid fa-magnifying-glass" /></button>
               </div>
               <div className="rr-header-1-contat d-none d-md-block ml-30">
-                <a className="rr-btn-border" href="contact.html"><span>Make Appointment <i className="fa-sharp fa-solid fa-plus" /></span></a>
+                <Link className="rr-btn-border" href={route('frontappointment.create')}><span>Make Appointment <i className="fa-sharp fa-solid fa-plus" /></span></Link>
               </div>
               <div className="rr-header-bar d-xl-none">
                 <button className="rr-menu-bar"><i className="fa-solid fa-bars" /></button>
